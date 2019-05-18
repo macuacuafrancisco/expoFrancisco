@@ -13,8 +13,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.body}>
-        <Switch value={this.state.valor} onValueChange={(v) => this.setState({ valor: v })} />
+        <Switch thumbTintColor="#0000FF" onTintColor="#FF0000" value={this.state.valor} onValueChange={(v) => this.setState({ valor: v })} />
         <Text>{this.state.valor.toString()}</Text>
+        <Text>{(this.state.valor) ? "Selecionado" : "Nao Selecionado"}</Text>
       </View>
     );
   }
